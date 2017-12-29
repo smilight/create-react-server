@@ -48,6 +48,7 @@ function renderHTML(config, options) {
         component: config.component,
         error: config.error,
         html: config.html,
+        css: config.css,
         initialProps: config.initialProps,
         store: config.store,
         renderProps: config.renderProps,
@@ -134,8 +135,7 @@ function middleware(options, template, req, res) {
 
         // console.log('Setting context initial props', initialProps);
         // console.log('Store state before rendering', context.store.getState());
-
-        return {
+        return "render" in options ? options.render(req, res, initialProps, context): {
             html: renderToString(React.createElement(
                 StaticRouter,
                 {location: req.url, context: context},
@@ -171,6 +171,7 @@ function middleware(options, template, req, res) {
                 error: null,
                 initialProps: initialProps,
                 html: '',
+                css: '',
                 req: req,
                 res: res,
                 store: context.store,
