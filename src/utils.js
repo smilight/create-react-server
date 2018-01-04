@@ -96,16 +96,17 @@ function middleware(options, template, req, res) {
             if (!options[k]) throw new Error('Mandatory option not defined: ' + k);
         });
 
-        var initialHtml = renderToString(React.createElement(
-            StaticRouter,
-            {location: req.url, context: context},
-            options.app({
-                props: undefined,
-                req: req,
-                res: res,
-                state: undefined
-            })
-        ));
+        var initialHtml = "render" in options ? options.render(req, res, initialProps, context) :
+            renderToString(React.createElement(
+                StaticRouter,
+                {location: req.url, context: context},
+                options.app({
+                    props: undefined,
+                    req: req,
+                    res: res,
+                    state: undefined
+                })
+            ));
 
         // console.log('Context', context);
 
