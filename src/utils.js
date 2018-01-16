@@ -124,7 +124,8 @@ function middleware(options, template, req, res) {
                 location: context.location,
                 req: req,
                 res: res,
-                store: context.store
+                store: context.store,
+                routeProps: context.routeProps
             }) : null);
         }).catch(function(e) {
             return {initialError: e.message || e.toString()};
