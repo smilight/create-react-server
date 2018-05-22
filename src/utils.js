@@ -54,6 +54,7 @@ function renderHTML(config, options) {
         renderProps: config.renderProps,
         req: config.req,
         res: config.res,
+        options: options,
         template: config.isNotEmbed ? config.template : config.template.replace(
             '<head>', // this should be the first script on a page so that others can pick it up
             '<head>' +
