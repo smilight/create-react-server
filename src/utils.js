@@ -54,7 +54,7 @@ function renderHTML(config, options) {
         renderProps: config.renderProps,
         req: config.req,
         res: config.res,
-        template: config.template.replace(
+        template: config.isNotEmbed ? config.template : config.template.replace(
             '<head>', // this should be the first script on a page so that others can pick it up
             '<head>' +
             '<script type="text/javascript">window["' + options.initialStateKey + '"] = ' + JSON.stringify(config.store ? config.store.getState() : undefined) + ';</script>' +
