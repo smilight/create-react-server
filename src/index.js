@@ -67,6 +67,8 @@ function createExpressMiddleware(options) {
 
     options = options || {};
 
+    console.log('&&&&&&&&&&&&&&&&', options);
+
     options.fs = options.fs || fs;
     options.outputPath = options.outputPath || path.join(process.cwd(), 'build');
     options.templatePath = options.templatePath || path.join(options.outputPath, 'index.html');

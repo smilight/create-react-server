@@ -24,29 +24,29 @@
   },
   "devDependencies": {
     "babel-plugin-transform-ensure-ignore": "^0.1.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react-app": "^3.0.3",
-    "jest": "^21.2.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react-app": "^9.0.0",
+    "jest": "^24.8.0",
     "memory-fs": "^0.4.1",
-    "node-fetch": "^1.7.3",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2"
+    "node-fetch": "^2.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4"
   },
   "dependencies": {
     "babel-register": "^6.26.0",
-    "create-react-class": "^15.6.2",
-    "express": "^4.15.5",
-    "hoist-non-react-statics": "^2.3.1",
-    "prop-types": "^15.6.0",
-    "yargs": "^9.0.1"
+    "create-react-class": "^15.6.3",
+    "express": "^4.17.1",
+    "hoist-non-react-statics": "^3.3.0",
+    "prop-types": "^15.7.2",
+    "yargs": "^13.3.0"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*",
-    "react-router-dom": ">=4.0.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1"
   },
   "author": "Kirill Konshin",
   "repository": {
